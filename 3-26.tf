@@ -1,4 +1,4 @@
-resource "local_file" "abc" {
+resource "local_file" "step7" {
   content  = ""
   filename = "${path.module}/step7.txt"
 
