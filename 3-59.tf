@@ -25,7 +25,3 @@ output "C_group" {
     for name, user in var.members : user.role => name...
   }
 }
-
-output "D_with_filter" {
-  value = [for v in var.names : upper(v) if v != "a"]
-}
