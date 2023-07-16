@@ -17,7 +17,7 @@ resource "local_file" "foo" {
   }
 
   provisioner "local-exec" {
-    when    = prevent_destroy
+    when    = destroy
     command = "echo The deleting filename is ${self.filename}"
   }
 }
