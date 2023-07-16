@@ -4,10 +4,10 @@ variable "sensitive_content" {
 }
 
 resource "local_file" "foo" {
-  content  = upper(var.sensitive.content)
+  content  = upper(var.sensitive_content)
   filename = "${path.module}/foo.bar"
 
-  provisioiner "local-exec" {
+  provisioner "local-exec" {
     command = "echo The content is ${self.content}"
   }
 
